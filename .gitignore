@@ -1,0 +1,24 @@
+
+# certain files
+w4 FP notes.txt
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore build output
+dist/
+build/
+
+# Ignore log files
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files
+.env
+
+# Ignore IDE configuration files
+.vscode/
+.idea/
