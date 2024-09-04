@@ -30,12 +30,12 @@
             </div>
         </nav>
         <header class="container">
-            <div class="row header__row">
+            <div class="row header__row stocks__row--header">
                 <h1 class="header__title stocks__color">
                     Browse our stock listings
                 </h1>           
                 <div class="ui__wrapper stocks__ui--wrapper">
-                    <input type="text" class="ui_input" placeholder="Search your heart's content"/>
+                    <input type="text" class="ui_input stocks__input" placeholder="Search by Ticker, Name or Keyword"/>
                     <button class="ui__btn stocks__ui--btn">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -45,8 +45,18 @@
         <div class="overlay"></div>
     </section>
     <section class="container">
-        <div class="display row">
-           
+        <div class="display row stocks__display">
+           <div class="search__wrapper">
+            <h2 class="search__info">
+                Search results:
+            </h2>
+            <div class="search__info--prices">
+                
+            </div>
+           </div>
+           <section class="data__wrapper">
+            sample
+           </section>
         </div>
     </section>
     <script src="./index.js"></script>

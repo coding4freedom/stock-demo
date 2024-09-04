@@ -92,7 +92,7 @@ nav {
 }
 
 .nav__link {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .nav__btn {
@@ -105,13 +105,19 @@ nav {
 /*
     Header Section
 */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .header__row {
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
     text-align: center;
     margin-top: 2rem;
     gap: 2rem;
+    width: 65%;
 }
 
 .header__title {
@@ -121,7 +127,7 @@ nav {
 
 .header__para {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .ui__wrapper {
@@ -160,12 +166,12 @@ nav {
 
 .display {
     justify-content: center;
-    align-items: center;    
+    align-items: center;        
 }
 
 .display__img {
     width: 100%;
-    height: 60vh;
+    height: 60vh;    
 }
 
 
@@ -205,27 +211,67 @@ nav {
 .stocks__nav--link {
     color: #fff;
 }
+.stocks__color {
+    font-size: 3rem;
+    font-weight: 400;
+}
 
 .stocks__nav--btn {
     background-color: #fff;
     color: #6131a9;
 }
 
+.stocks__row--header {
+    margin-top: 0;
+}
+
 .stocks__ui--wrapper {
     position: relative;
 }
 
+.stocks__input {
+    font-size: 1.5rem;
+    border-radius: 30px;
+}
+
 .stocks__ui--btn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 8px;
     bottom: 0;
-    padding: 0 20px 0 8px;
-    border-radius: 0;
-    height: auto;
+    padding: 0 15px 0 8px;
+    border-radius: 30px;
+    height: 60px;
     background-color: #fff;    
 }
 
 .stocks__ui--btn i {
     color: #6131a9;
+}
+
+/*
+    Stocks Main Section
+*/
+.search__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.stocks__display {
+    margin-top: 3.5rem;
+    flex-direction: column;
+}
+.search__info {
+    font-size: 2rem;
+}
+.search__info--prices {
+    content: '';
+}
+.data__wrapper {
+    margin-top: 4rem;
+    width: 100%;
+    min-height: 50vh;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
