@@ -35,7 +35,8 @@
                     Browse our stock listings
                 </h1>           
                 <div class="ui__wrapper stocks__ui--wrapper">
-                    <input type="text" class="ui_input stocks__input" placeholder="Search by Ticker, Name or Keyword"/>
+                    <input type="text" id="symbol" class="ui_input stocks__input" placeholder="Search by Ticker, Name or Keyword" oninput="suggestStocks()"/>
+                    <div id="suggestions" class="suggestion__list"></div>
                     <button class="ui__btn stocks__ui--btn">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -51,7 +52,13 @@
                 Search results:
             </h2>
             <div class="search__info--prices">
-                
+                <select class="dropdown" id="date-selector">
+                    <option value="1">1 Day Ago</option>
+                    <option value="2">2 Day Ago</option>
+                    <option value="3">3 Day Ago</option>
+                    <option value="4">4 Day Ago</option>
+                    <option value="5">5 Day Ago</option>
+                </select>
             </div>
            </div>
            <section class="data__wrapper">

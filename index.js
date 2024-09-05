@@ -4,21 +4,35 @@ https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${query}&apike
 
 */
 
+const url = 'https://www.alphavantage.co/query';
+const apiKey = '77UTA9UMYE8RGAZ0fake';
+const stockList = [];
 
-const apiKey =s;
+// set up suggestStocks() for input field 
+// set up fetchStockData() on button to get stock information 
 
-async function testApi(query) {
-    const response = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${query}&apikey=${apiKey}`);
+async function suggestStocks() {
+    const query = document.getElementById('symbol').value;
 
+    if (query.length < 2) {
+        document.getElementById('suggestions').innerHTML = '';
+        return;
+    }
+
+    const response = await fetch(`${url}?function=SYMBOL_SEARCH&keywords=${query}&apikey=${apiKey}`);
     const data = await response.json();
 
-    const symbols = data.bestMatches || [];
+    if (data['bestMatches']) {
+        const suggestions = data['bestMatches'].slice(0, 5);
+        stockList.length = 0;
+        stockList.push(...suggestions);
 
-    const result = symbols.map(match => {
-        return `${match['1. symbol']} - ${match['2. name']}`
-    }).join('')
+        const suggestionsHTML = suggestions.map(stock => 
+            `<div class="suggestion-item" onclick="selectStock('${stock['1. symbol']}')">${stock['2. name']} (${stock['1. symbol']})</div>`
+        ).join('');
 
-    console.log(result);
+        document.getElementById('suggestions').innerHTML = suggestionsHTML;
+    } else {
+        document.getElementById('suggestions').innerHTML = 'No suggestions found';
+    }    
 }
-
-testApi('app')
