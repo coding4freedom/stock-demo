@@ -1,71 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="https://kit.fontawesome.com/aeef6d72bc.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/aeef6d72bc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <section class="nav-header">
-        <nav class="container">
-            <div class="row nav__row">
-                <div class="nav__logo">
-                    <img src="./assets/whitelogo.png" alt="blinker logo image" class="nav__logo-img">
-                </div>
-                <div class="list__wrapper">
-                    <ul class="nav__list">
-                        <li class="nav__links">
-                            <a href="./index.html" class="nav__link stocks__nav--link">Home</a>
-                        </li>
-                        <li class="nav__links">
-                            <a href="./stocks.html" class="nav__link stocks__nav--link">Find Stocks</a>
-                        </li>
-                        <li class="nav__links">
-                            <button class="nav__btn stocks__nav--btn">CONTACT</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <header class="container">
-            <div class="row header__row stocks__row--header">
-                <h1 class="header__title stocks__color">
-                    Browse our stock listings
-                </h1>           
-                <div class="ui__wrapper stocks__ui--wrapper">
-                    <input type="text" id="symbol" class="ui_input stocks__input" placeholder="Search by Ticker, Name or Keyword" oninput="suggestStocks()"/>
-                    <div id="suggestions" class="suggestion__list"></div>
-                    <button class="ui__btn stocks__ui--btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-            </div>
-        </header>
-        <div class="overlay"></div>
+      <nav class="container">
+        <div class="row nav__row">
+          <div class="nav__logo">
+            <img
+              src="./assets/whitelogo.png"
+              alt="blinker logo image"
+              class="nav__logo-img"
+            />
+          </div>
+          <div class="list__wrapper">
+            <ul class="nav__list">
+              <li class="nav__links">
+                <a href="./index.html" class="nav__link stocks__nav--link"
+                  >Home</a
+                >
+              </li>
+              <li class="nav__links">
+                <a href="./stocks.html" class="nav__link stocks__nav--link"
+                  >Find Stocks</a
+                >
+              </li>
+              <li class="nav__links">
+                <button class="nav__btn stocks__nav--btn">CONTACT</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <header class="container">
+        <div class="row header__row stocks__row--header">
+          <h1 class="header__title stocks__color">Browse our stock listings</h1>
+          <div class="ui__wrapper stocks__ui--wrapper">
+            <input
+              type="text"
+              id="symbol"
+              class="ui_input stocks__input"
+              placeholder="Search by Ticker, Name or Keyword"
+              oninput="suggestStocks()"
+            />
+            <div id="suggestions" class="suggestion__list"></div>
+            <button class="ui__btn stocks__ui--btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="overlay"></div>
     </section>
     <section class="container">
-        <div class="display row stocks__display">
-           <div class="search__wrapper">
-            <h2 class="search__info">
-                Search results:
-            </h2>
-            <div class="search__info--prices">
-                <select class="dropdown" id="date-selector">
-                    <option value="1">1 Day Ago</option>
-                    <option value="2">2 Day Ago</option>
-                    <option value="3">3 Day Ago</option>
-                    <option value="4">4 Day Ago</option>
-                    <option value="5">5 Day Ago</option>
-                </select>
-            </div>
-           </div>
-           <section class="data__wrapper">
-            sample
-           </section>
+      <div class="display row stocks__display">
+        <div class="search__wrapper">
+          <h2 class="search__info">Search results:</h2>
+          <div class="search__info--prices">
+            <select class="dropdown" id="date-selector">
+              <option value="1">1 Day Ago</option>
+              <option value="2">2 Day Ago</option>
+              <option value="3">3 Day Ago</option>
+              <option value="4">4 Day Ago</option>
+              <option value="5">5 Day Ago</option>
+            </select>
+          </div>
         </div>
+        <section class="data__wrapper">
+          <div class="card">
+            <div class="card__header" onclick="searchGoogle('AAPL')">
+                <h2>AAPL</h2>
+                <div class="card__overlay">More Info</div>
+            </div>
+            <p><strong>Date:</strong> 2024-09-04</p>
+            <p><strong>Current Price:</strong> $174.30</p>
+            <p><strong>Open Price:</strong> $172.50</p>
+            <p><strong>High Price:</strong> $175.00</p>
+            <p><strong>Low Price:</strong> $171.75</p>
+            <p><strong>Volume:</strong> 76200000</p>
+          </div>          
+        </section>
+      </div>
     </section>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>

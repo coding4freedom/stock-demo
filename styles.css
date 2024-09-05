@@ -274,4 +274,84 @@ header {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/*
+    Cards
+*/
+
+.card {
+    background-color: #fff; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    width: calc(33.333% - 16px); 
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    min-width: 250px; 
+    max-width: 350px;     
+}
+.card__header {
+    position: relative;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 16px;     
+    background-color: #f5f5f5; 
+    border-bottom: 1px solid #ddd;
+    flex: 0 1 40%; 
+    box-sizing: border-box; 
+}
+.card__header:hover {
+    background-color: #e0e0e0;
+}
+.card__overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: left 0.3s ease; 
+    box-sizing: border-box;
+}
+.card__header:hover .card__overlay {
+    left: 0;
+}
+.card h2,
+.card strong {
+    color: #6131a9;
+}
+.card strong {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.card p {
+    margin: 0;
+    padding: 16px; 
+    flex: 1; 
+    box-sizing: border-box; 
+}
+
+/*  Card Media Queries */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 16px); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* One card per row on very small screens */
+    }
 }

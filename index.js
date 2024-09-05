@@ -36,3 +36,9 @@ async function suggestStocks() {
         document.getElementById('suggestions').innerHTML = 'No suggestions found';
     }    
 }
+
+function searchGoogle(stockName) {
+    const query = `forbes ${stockName}`;
+    const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+    window.open(searchUrl, '_blank');
+}
