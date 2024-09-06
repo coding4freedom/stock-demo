@@ -200,7 +200,7 @@ header {
 
 .overlay:after {
     content: '';
-    position: absolute;
+    position: absolute;    
     top: 0;
     left: 0;
     right: 0;
@@ -234,10 +234,32 @@ header {
     border-radius: 30px;
 }
 
+.suggestion__list {
+    position: absolute; 
+    left: 0; 
+    top: 100%; 
+    width: 100%; 
+    background-color: #ffffff; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    z-index: 1000; 
+    display: none;
+}
+
+.suggestion-item {
+    padding: 10px; 
+    cursor: pointer; 
+}
+  
+.suggestion-item:hover {
+    background-color: #f0f0f0; 
+}
+
 .stocks__ui--btn {
     position: absolute;
     top: 5px;
-    right: 8px;
+    right: 40px;
     bottom: 0;
     padding: 0 15px 0 8px;
     border-radius: 30px;
@@ -268,7 +290,7 @@ header {
     content: '';
 }
 .data__wrapper {
-    margin-top: 4rem;
+    margin: 4rem 0;
     width: 100%;
     min-height: 50vh;
     height: 100%;
@@ -315,6 +337,7 @@ header {
     left: -100%;
     height: 100%;
     width: 100%;
+    cursor: pointer;
     background-color: rgba(0, 0, 0, 0.8); 
     color: #fff; 
     display: flex;

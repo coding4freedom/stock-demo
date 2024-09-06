@@ -49,10 +49,10 @@
               id="symbol"
               class="ui_input stocks__input"
               placeholder="Search by Ticker, Name or Keyword"
-              oninput="suggestStocks()"
+              oninput="suggestStocks()"              
             />
-            <div id="suggestions" class="suggestion__list"></div>
-            <button class="ui__btn stocks__ui--btn">
+            <div id="suggestions" class="suggestion__list">something</div>
+            <button class="ui__btn stocks__ui--btn" onclick="fetchStockData()">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
@@ -74,7 +74,7 @@
             </select>
           </div>
         </div>
-        <section class="data__wrapper">
+        <section id="stock__cards" class="data__wrapper">
           <div class="card">
             <div class="card__header" onclick="searchGoogle('AAPL')">
                 <h2>AAPL</h2>
@@ -86,10 +86,86 @@
             <p><strong>High Price:</strong> $175.00</p>
             <p><strong>Low Price:</strong> $171.75</p>
             <p><strong>Volume:</strong> 76200000</p>
-          </div>          
+           </div>         
+          <div class="card">
+            <div class="card__header" onclick="searchGoogle('AAPL')">
+                <h2>AAPL</h2>
+                <div class="card__overlay">More Info</div>
+            </div>
+            <p><strong>Date:</strong> 2024-09-04</p>
+            <p><strong>Current Price:</strong> $174.30</p>
+            <p><strong>Open Price:</strong> $172.50</p>
+            <p><strong>High Price:</strong> $175.00</p>
+            <p><strong>Low Price:</strong> $171.75</p>
+            <p><strong>Volume:</strong> 76200000</p>
+           </div>         
+          <div class="card">
+            <div class="card__header" onclick="searchGoogle('AAPL')">
+                <h2>AAPL</h2>
+                <div class="card__overlay">More Info</div>
+            </div>
+            <p><strong>Date:</strong> 2024-09-04</p>
+            <p><strong>Current Price:</strong> $174.30</p>
+            <p><strong>Open Price:</strong> $172.50</p>
+            <p><strong>High Price:</strong> $175.00</p>
+            <p><strong>Low Price:</strong> $171.75</p>
+            <p><strong>Volume:</strong> 76200000</p>
+           </div>         
+          <div class="card">
+            <div class="card__header" onclick="searchGoogle('AAPL')">
+                <h2>AAPL</h2>
+                <div class="card__overlay">More Info</div>
+            </div>
+            <p><strong>Date:</strong> 2024-09-04</p>
+            <p><strong>Current Price:</strong> $174.30</p>
+            <p><strong>Open Price:</strong> $172.50</p>
+            <p><strong>High Price:</strong> $175.00</p>
+            <p><strong>Low Price:</strong> $171.75</p>
+            <p><strong>Volume:</strong> 76200000</p>
+           </div>         
+          <div class="card">
+            <div class="card__header" onclick="searchGoogle('AAPL')">
+                <h2>AAPL</h2>
+                <div class="card__overlay">More Info</div>
+            </div>
+            <p><strong>Date:</strong> 2024-09-04</p>
+            <p><strong>Current Price:</strong> $174.30</p>
+            <p><strong>Open Price:</strong> $172.50</p>
+            <p><strong>High Price:</strong> $175.00</p>
+            <p><strong>Low Price:</strong> $171.75</p>
+            <p><strong>Volume:</strong> 76200000</p>
+           </div>         
+          <div class="card">
+            <div class="card__header" onclick="searchGoogle('AAPL')">
+                <h2>AAPL</h2>
+                <div class="card__overlay">More Info</div>
+            </div>
+            <p><strong>Date:</strong> 2024-09-04</p>
+            <p><strong>Current Price:</strong> $174.30</p>
+            <p><strong>Open Price:</strong> $172.50</p>
+            <p><strong>High Price:</strong> $175.00</p>
+            <p><strong>Low Price:</strong> $171.75</p>
+            <p><strong>Volume:</strong> 76200000</p>
+           </div>         
         </section>
       </div>
     </section>
     <script src="./index.js"></script>
   </body>
 </html>
+<!-- 
+  sample cards below 
+
+  <div class="card">
+    <div class="card__header" onclick="searchGoogle('AAPL')">
+        <h2>AAPL</h2>
+        <div class="card__overlay">More Info</div>
+    </div>
+    <p><strong>Date:</strong> 2024-09-04</p>
+    <p><strong>Current Price:</strong> $174.30</p>
+    <p><strong>Open Price:</strong> $172.50</p>
+    <p><strong>High Price:</strong> $175.00</p>
+    <p><strong>Low Price:</strong> $171.75</p>
+    <p><strong>Volume:</strong> 76200000</p>
+   </div>
+-->
