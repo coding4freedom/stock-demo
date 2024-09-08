@@ -5,7 +5,7 @@ https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${query}&apike
 */
 
 const url = 'https://www.alphavantage.co/query';
-const apiKey = 'OJG33CJOXKOFNPSQ';
+const apiKey = '77UTA9UMYE8RGAZ0';
 const stockList = [];
 
 // set up suggestStocks() for input field 
