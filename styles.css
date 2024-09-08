@@ -36,6 +36,10 @@ button {
     background-color: #6131a9;
 }
 
+button:active {
+    transform: translateY(1.8px);
+}
+
 .container {
     width: 100%;
     max-width: 1200px;    
@@ -93,6 +97,31 @@ nav {
 
 .nav__link {
     font-size: 1.4rem;
+    position: relative;
+}
+
+.nav__link:after { 
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    background-color: #6131a9;            
+    transition: all 300ms ease;
+}
+.stocks__nav--link:after {
+    background-color: #fff;
+}
+
+/* .nav__link:hover {
+    text-decoration: solid underline 4px;
+    text-underline-offset: 8px;
+} */
+
+.nav__link:hover:after {
+    right: 0;
+    width: 100%;    
 }
 
 .nav__btn {
@@ -310,6 +339,41 @@ header {
     gap: 2rem;
 }
 
+.stocks__loading span,
+.stocks__loading i {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #6131a9;
+}
+
+.stocks__loading i {
+    font-size: 2.6rem;
+}
+
+.stocks__loading {
+    display: none;    
+}
+
+.stocks__loading.loading__spinner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.stock__spinner {
+    animation: rotate 500ms infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 /*
     Cards
 */

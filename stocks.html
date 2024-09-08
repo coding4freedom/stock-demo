@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Stock Finder</title>
     <link rel="stylesheet" href="./styles.css" />
     <script
       src="https://kit.fontawesome.com/aeef6d72bc.js"
@@ -49,7 +49,8 @@
               id="symbol"
               class="ui_input stocks__input"
               placeholder="Search by Ticker, Name or Keyword"
-              oninput="suggestStocks()"              
+              oninput="suggestStocks()"
+              autocomplete='off'              
             />
             <div id="suggestions" class="suggestion__list">something</div>
             <button class="ui__btn stocks__ui--btn" onclick="fetchStockData()">
@@ -74,79 +75,11 @@
             </select>
           </div>
         </div>
-        <section id="stock__cards" class="data__wrapper">
-          <div class="card">
-            <div class="card__header" onclick="searchGoogle('AAPL')">
-                <h2>AAPL</h2>
-                <div class="card__overlay">More Info</div>
-            </div>
-            <p><strong>Date:</strong> 2024-09-04</p>
-            <p><strong>Current Price:</strong> $174.30</p>
-            <p><strong>Open Price:</strong> $172.50</p>
-            <p><strong>High Price:</strong> $175.00</p>
-            <p><strong>Low Price:</strong> $171.75</p>
-            <p><strong>Volume:</strong> 76200000</p>
-           </div>         
-          <div class="card">
-            <div class="card__header" onclick="searchGoogle('AAPL')">
-                <h2>AAPL</h2>
-                <div class="card__overlay">More Info</div>
-            </div>
-            <p><strong>Date:</strong> 2024-09-04</p>
-            <p><strong>Current Price:</strong> $174.30</p>
-            <p><strong>Open Price:</strong> $172.50</p>
-            <p><strong>High Price:</strong> $175.00</p>
-            <p><strong>Low Price:</strong> $171.75</p>
-            <p><strong>Volume:</strong> 76200000</p>
-           </div>         
-          <div class="card">
-            <div class="card__header" onclick="searchGoogle('AAPL')">
-                <h2>AAPL</h2>
-                <div class="card__overlay">More Info</div>
-            </div>
-            <p><strong>Date:</strong> 2024-09-04</p>
-            <p><strong>Current Price:</strong> $174.30</p>
-            <p><strong>Open Price:</strong> $172.50</p>
-            <p><strong>High Price:</strong> $175.00</p>
-            <p><strong>Low Price:</strong> $171.75</p>
-            <p><strong>Volume:</strong> 76200000</p>
-           </div>         
-          <div class="card">
-            <div class="card__header" onclick="searchGoogle('AAPL')">
-                <h2>AAPL</h2>
-                <div class="card__overlay">More Info</div>
-            </div>
-            <p><strong>Date:</strong> 2024-09-04</p>
-            <p><strong>Current Price:</strong> $174.30</p>
-            <p><strong>Open Price:</strong> $172.50</p>
-            <p><strong>High Price:</strong> $175.00</p>
-            <p><strong>Low Price:</strong> $171.75</p>
-            <p><strong>Volume:</strong> 76200000</p>
-           </div>         
-          <div class="card">
-            <div class="card__header" onclick="searchGoogle('AAPL')">
-                <h2>AAPL</h2>
-                <div class="card__overlay">More Info</div>
-            </div>
-            <p><strong>Date:</strong> 2024-09-04</p>
-            <p><strong>Current Price:</strong> $174.30</p>
-            <p><strong>Open Price:</strong> $172.50</p>
-            <p><strong>High Price:</strong> $175.00</p>
-            <p><strong>Low Price:</strong> $171.75</p>
-            <p><strong>Volume:</strong> 76200000</p>
-           </div>         
-          <div class="card">
-            <div class="card__header" onclick="searchGoogle('AAPL')">
-                <h2>AAPL</h2>
-                <div class="card__overlay">More Info</div>
-            </div>
-            <p><strong>Date:</strong> 2024-09-04</p>
-            <p><strong>Current Price:</strong> $174.30</p>
-            <p><strong>Open Price:</strong> $172.50</p>
-            <p><strong>High Price:</strong> $175.00</p>
-            <p><strong>Low Price:</strong> $171.75</p>
-            <p><strong>Volume:</strong> 76200000</p>
-           </div>         
+        <section id="stock__cards" class="data__wrapper">                     
+              <div id="is__loading" class="stocks__loading">
+                <span>Loading ...</span>
+                <i class="fas fa-spinner stock__spinner"></i>
+              </div>    
         </section>
       </div>
     </section>

@@ -5,7 +5,7 @@ https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${query}&apike
 */
 
 const url = 'https://www.alphavantage.co/query';
-const apiKey = 'OJG33CJOXKOFNPSQfake';
+const apiKey = 'OJG33CJOXKOFNPSQ';
 const stockList = [];
 
 // set up suggestStocks() for input field 
@@ -60,6 +60,9 @@ function getDateNDaysAgo(n) {
 
 // Function to fetch and display stock data
 async function fetchStockData() {
+    const loadingEl = document.getElementById('is__loading');
+    loadingEl.classList.add('loading__spinner')
+
     const symbols = stockList.map( stock => stock['1. symbol']);
     if ( symbols.length === 0) {
         alert('Please enter a stock symbol or select from suggestions.');
@@ -110,7 +113,8 @@ async function fetchStockData() {
             </div>
             `;
         }).join('');
-
+        
+        loadingEl.classList.remove('loading__spinner');
         document.getElementById('stock__cards').innerHTML = cardsHTML;
 
     } catch (error) {
@@ -134,3 +138,17 @@ document.addEventListener('click', function(event) {
         suggestionsContainer.style.display = 'none'; // Hide suggestions if clicked outside
     }
 });
+
+function updatePlaceholder() {
+    const input = document.getElementById('symbol');
+
+    if (window.matchMedia("(max-width: 606px)").matches) {
+        input.placeholder = 'Search by Ticker';
+    } else {
+        input.placeholder = 'Search by Ticker, Name or Keyword';
+    }
+}
+
+updatePlaceholder();
+
+window.addEventListener('resize', updatePlaceholder);
